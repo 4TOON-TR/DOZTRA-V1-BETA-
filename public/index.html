@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOZTRA-V1(BETA)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 DOZTRA-بازی دوز انلاین</h1>
+        
+        <div id="menu">
+            <button onclick="createRoom()">اتاق جدید بساز</button>
+            <div>
+                <input type="text" id="roomInput" placeholder="کد اتاق رو وارد کن">
+                <button onclick="joinRoom()">ورود به اتاق</button>
+            </div>
+        </div>
+
+        <div id="game" style="display:none">
+            <div id="status">در حال انتظار برای بازیکن دوم...</div>
+            <div id="board"></div>
+            <button id="resetBtn" onclick="resetGame()" style="display:none">بازی جدید</button>
+            <div id="roomCode"></div>
+        </div>
+    </div>
+
+      <div class="footer">
+        <span class="rgb-text">BY 4TOON</span>
+    </div>
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
